@@ -48,4 +48,12 @@ public class Stack {
         else for (int i : data) s += i + " ";
         return s;
     }
+
+    public boolean equals(Stack stack) {
+        if (data.length != stack.data.length) return false;
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] != stack.data[i]) return false;
+        }
+        return true;
+    }
 }
