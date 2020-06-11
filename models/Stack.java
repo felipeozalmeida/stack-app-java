@@ -32,6 +32,15 @@ public class Stack {
         return data[--top];
     }
 
+    public int moveTo(Stack destination) {
+        int operations = 0;
+        while (!destination.isStackFilled()) {
+            destination.push(pop());
+            operations++;
+        }
+        return operations;
+    }
+
     @Override
     public String toString() {
         String s = "";
